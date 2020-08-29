@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import MasterPage from './components/MainPage/MasterPage';
+import LoginPage from './components/LoginPage/LoginPage';
+import CheckSign from './components/Main/CheckSign';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CheckSign />
   </React.StrictMode>,
   document.getElementById('root')
 );
