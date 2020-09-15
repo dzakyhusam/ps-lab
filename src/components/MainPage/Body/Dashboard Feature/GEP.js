@@ -1,13 +1,13 @@
 import React from 'react';
 
-class UC extends React.Component {
+class GEP extends React.Component {
     render() {
         return(
             <div>
-                <h1>UC</h1>
+                <h1>GEP</h1>
             </div>
         )
     }
 }
 
-export default UC;
+export default GEP;

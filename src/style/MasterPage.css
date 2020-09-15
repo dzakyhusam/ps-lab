@@ -126,7 +126,7 @@ header {
 }
 
 .box {
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   height: 630px;
   background-color: rgb(246, 247, 251);

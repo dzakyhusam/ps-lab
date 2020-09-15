@@ -6,17 +6,17 @@ class CheckSign extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLogin: 'NOT_LOGGED_IN'
+            isLogin: false
         };
         this.loginClick = this.loginClick.bind(this);
     };
 
     loginClick() {
-        this.setState({isLogin: 'LOGGED_IN'});
+        this.setState({isLogin: !this.state.isLogin});
     };
 
     render() {
-        if(this.state.isLogin === 'NOT_LOGGED_IN') {
+        if(this.state.isLogin === false) {
             return <LoginPage loginClick={this.loginClick}/>
         }
         return <MasterPage />
