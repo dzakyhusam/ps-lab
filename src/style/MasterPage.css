@@ -1,62 +1,73 @@
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-/*Header*/
-header {
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
   height: 90px;
-  display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
 }
 
-.con-header {
-  height: 60px;
-  /*box-shadow: 0 3px 4px -4px black;*/
-}
-
-/*Header-Logo*/
-.header-logo {
+.left-header-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
   height: 55px;
-  padding: 5px;
-}
-
-/*Header-SearchBox*/
-.form-search {
   align-items: center;
-  height: 50px;
+  background-color: rgb(255, 255, 255);
 }
 
-.form-control {
+.header-logo{
+  height: 55px;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+
+.searchbox-container {
   display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border: solid 2px rgb(248, 248, 248);
+  background-color: rgb(248, 248, 248);
+}
+
+.searchbox-container img {
+  height: 20px;
+  margin: auto 7px;
+}
+
+.searchbox-container input {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+}
+
+.searchbox-container input:focus {
+  outline: none;
+  background-color: white;
+}
+
+.focus {
+  border: solid 2px rgb(248, 248, 248);
+  background-color: white;
+}
+
+.right-header-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: 55px;
   align-items: center;
-  width: 150px;
-  background-color: rgb(246, 247, 251);
-  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
 }
 
-.form-control:focus {
-  width: 400px;
-  transition: 0.8s ease-in-out;
-}
-
-/*Header-Notif*/
 .notification {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   color: rgb(230, 232, 238);
   margin-right: 20px;
-}
-
-/*Header-Account*/
-.header-account {
-  display: flex;
-  flex-direction: row;
-  text-align: right;
-  float: right;
-  padding: 5px;
-  border-radius: 5px;
 }
 
 .account-name h2{
@@ -71,17 +82,34 @@ header {
   height: 45px;
   border-radius: 50%;
   margin-left: 15px;
+  margin-right: 1vw;
+  cursor: pointer;
 }
 
-/*Body*/
-.sidebar {
-  padding: 0px;
+.body-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 90px);
+  width: 100vw;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(206.05px + 3vw);
+  height: calc(100vh - 90px);
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
 }
 
 .btn-sidebar {
   display: flex;
   flex-direction: row;
+  width: calc(206.05px + 1vw );
+  height: 45px;
+  margin: 0 auto 10px auto;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .btn-sidebar:hover {
@@ -100,12 +128,35 @@ header {
   border: 0px;
 }
 
+.sidebar-active {
+  background-color: rgba(248, 226, 23, 0.658);
+}
+
+.sidebar-active .sidebar-text h3 {
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+.sidebar-active .sidebar-icon {
+  background-color: rgb(38, 42, 65);
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  border: 0px;
+}
+
 .sidebar-icon {
-  padding: 5px 10px;
+  display: flex;
+  width: 35px;
+  height: 35px;
   border: 1px solid rgb(158, 157, 157);
   border-radius: 8px;
+  margin: 5px 5px;
   background-color: white;
   opacity: 0.5;
+}
+
+.sidebar-icon i {
+  margin: auto;
 }
 
 .sidebar-text {
@@ -118,76 +169,56 @@ header {
   font-size: 14px;
 }
 
-.setting-position {
-  margin-top: 40vh;
-  padding: 40px 5px;
-  border-radius: 20px;
-  background-color: rgb(246, 247, 251);
+.content-container {
+  display: flex;
+  width: calc(100vw - 206.05px - 4vw);
+  height: calc(100vh - 90px - 1vw);
+  border-radius: 30px;
+  background-color: rgb(248, 248, 248);
 }
 
-.box {
+.content-box-container {
+  width: calc(100vw - 206.05px - 4vw - 3vw);
+  height: calc(100vh - 90px - 4vw);
+  margin: auto;
   overflow: auto;
-  width: 100%;
-  height: 630px;
-  background-color: rgb(246, 247, 251);
-  border-radius: 50px;
 }
 
-.main-content {
-  overflow: auto;
-  margin: 2% 1%;
-  height: 586px;
-  
-}
-/*------------- START SCROLL BAR DESIGN------------*/
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(22, 29, 36); 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0); 
-}
-/*-------------END OF SCROLL BAR DESIGN------------*/
-
-.Hello h1 {
-  display: block;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-}
-
-.Hello h2 {
-  display: block;
-  font-size: 18px;
-}
-
-.hello-line {
+.hello-text {
   display: inline-block;
-  text-align: left;
-  height: 3px;
-  width: 150px;
-  background-color: rgb(214, 213, 205);
-  margin-top: 0px;
+  font-size: 18px;
+  color: rgb(175, 174, 174);
+  margin-bottom: 40px;
 }
 
-.feature-wrapper {
+.hello-text span {
+  font-weight: bold;
+  color: black;
+}
+
+.feature-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.feature-header img {
+  height: 30px;
+  margin: auto 10px auto 0;
+}
+
+.feature-header h2 {
+  display: block;
+  margin: auto 0;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.feature-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .feature-item {
@@ -197,7 +228,6 @@ header {
   border-radius: 30px;
   background-color: rgb(38, 42, 65);
   position: relative;
-  margin: auto;
 }
 
 .feature-item:hover {

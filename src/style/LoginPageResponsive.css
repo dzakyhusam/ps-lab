@@ -1,0 +1,25 @@
+@media screen and (max-width: 800px) {
+  .left-container {
+    width: 0;
+    height: 0;
+  }
+
+  .app-logo {
+    width: 0;
+    height: 0;
+  }
+
+  .dteti-logo {
+    width: 0;
+    height: 0;
+  }
+
+  .right-container {
+    width: 100vw;
+  }
+
+  .mobile-logo {
+    width: 40%;
+    margin: 30px 10%;
+  }
+}
