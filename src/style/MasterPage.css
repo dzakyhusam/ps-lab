@@ -27,8 +27,8 @@
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  border: solid 2px rgb(248, 248, 248);
-  background-color: rgb(248, 248, 248);
+  border: solid 2px rgb(247, 249, 252);
+  background-color: rgb(247, 249, 252);
 }
 
 .searchbox-container img {
@@ -40,7 +40,7 @@
   height: 40px;
   border: none;
   border-radius: 10px;
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(247, 249, 252);
 }
 
 .searchbox-container input:focus {
@@ -49,7 +49,7 @@
 }
 
 .focus {
-  border: solid 2px rgb(248, 248, 248);
+  border: solid 2px rgb(247, 249, 252);
   background-color: white;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .btn-sidebar:hover {
-  background-color: rgba(248, 226, 23, 0.658);
+  background-color: rgba(248, 235, 115, 0.658);
 }
 
 .btn-sidebar:hover .sidebar-text h3 {
@@ -171,17 +171,30 @@
 
 .content-container {
   display: flex;
+  border-radius: 30px;
+  background-color: rgb(247, 249, 252);
+}
+
+.content-profileview-active {
+  width: calc(100vw - 206.05px - 4vw - 20vw);
+  height: calc(100vh - 90px - 1vw);
+}
+
+.content-profileview-deactive {
   width: calc(100vw - 206.05px - 4vw);
   height: calc(100vh - 90px - 1vw);
-  border-radius: 30px;
-  background-color: rgb(248, 248, 248);
 }
 
 .content-box-container {
-  width: calc(100vw - 206.05px - 4vw - 3vw);
+  width: 96%;
   height: calc(100vh - 90px - 4vw);
   margin: auto;
   overflow: auto;
+}
+
+.main-dashboard {
+  width: 100%;
+  height: calc(100vh - 90px - 4vw);
 }
 
 .hello-text {
@@ -218,14 +231,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .feature-item {
   height: 420px;
-  width: 230px;
+  width: 23%;
   min-width: 200px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: rgb(38, 42, 65);
   position: relative;
 }
@@ -288,4 +301,122 @@
 
 .btn-feature:hover {
   background-color: rgb(175, 150, 4);
+}
+
+.selectedfeature-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 90px - 4vw);
+}
+
+.steps-container {
+  width: 35%;
+  height: calc(100vh - 90px - 4vw);
+}
+
+.step {
+  width: 100%;
+  height: fit-content;
+  padding-left: 5%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.step h3 {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  margin-top: 10px;
+  color: gray;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.step p {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 10px;
+  color: gray;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.step:hover {
+  border-left: 10px solid yellow;
+  background-color: white;
+}
+
+.step:hover h3 {
+  color: black;
+}
+
+.modeling-container {
+  width: 65%;
+  height: calc(100vh - 90px - 4vw);
+  background-color: white;
+}
+
+.feature-title {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  font-size: 22px;
+  font-weight: 650;
+}
+
+.feature-welcome {
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.profile-container {
+  display: flex;
+  border-radius: 30px;
+  background-color: rgb(247, 249, 252);
+}
+
+.profileview-active {
+  width: 19vw;
+  height: calc(100vh - 90px - 1vw);
+  margin: 0 1vw;
+}
+
+.profileview-deactive {
+  width: 0;
+  height: 0;
+}
+
+.content-profile-container {
+  width: 90%;
+  height: calc(100vh - 90px - 4vw);
+  margin: auto;
+}
+
+.profile-history-header {
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.profile-history-container {
+  width: 100%;
+  height: fit-content;
+  background-color: aqua;
+}
+
+.progress-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.progress-header-item {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: bisque;
 }

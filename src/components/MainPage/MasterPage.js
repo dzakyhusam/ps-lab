@@ -118,14 +118,30 @@ class MasterPage extends React.Component{
 
           </div>
 
-          <div className="content-container">
+          <div className={ this.state.profileView ? "content-container content-profileview-active" : "content-container content-profileview-deactive"}>
             <Dashboard
               accountName = { this.state.accountName } 
             />
           </div>
 
-          <div className="profile-container">
-            
+          <div className={ this.state.profileView ? "profile-container profileview-active" : "profile-container profileview-deactive"}>
+            <div className="content-profile-container">
+              <h2 className="profile-history-header">Latest History</h2>
+              <div className="profile-history-container">
+                <div className="progress-header">
+                  <div className="progress-header-item">Mo</div>
+                  <div className="progress-header-item">Tu</div>
+                  <div className="progress-header-item">We</div>
+                  <div className="progress-header-item">Th</div>
+                  <div className="progress-header-item">Fr</div>
+                  <div className="progress-header-item">Sa</div>
+                  <div className="progress-header-item">Su</div>
+                </div>
+                <div className="progress-date">
+                  <div className="progress-date-item"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>

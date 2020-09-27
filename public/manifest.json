@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PS Lab",
+  "name": "Power System Virtual Laboratory",
   "icons": [
     {
       "src": "favicon.ico",
